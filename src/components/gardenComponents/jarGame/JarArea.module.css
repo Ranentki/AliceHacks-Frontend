@@ -1,0 +1,48 @@
+.JarArea {
+    width: 100%;
+    flex : 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.JarWrapper {
+    --jar-aspect-ratio: 0.611;
+    user-select: none;
+
+    position: absolute;
+    z-index: 100;
+    height: min(71vh, 90vw);
+    aspect-ratio: var(--jar-aspect-ratio);
+    background-color: #480061;
+    clip-path: polygon(17% 28%, 13% 9%, 22% 6%, 74% 4%, 89% 11%, 90% 28%, 99% 36%, 100% 71%, 94% 90%, 34% 96%, 0 86%, 0 35%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Jar {
+    user-select: none;
+    height: min(69vh, 88vw);
+    clip-path: polygon(17% 28%, 13% 9%, 22% 6%, 74% 4%, 89% 11%, 90% 28%, 99% 36%, 100% 71%, 94% 90%, 34% 96%, 0 86%, 0 35%);
+    aspect-ratio: var(--jar-aspect-ratio);
+}
+
+.VictoryMessage {
+    width: 100%;
+    height: 90vh;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    z-index: 100;
+}
+
+.VictoryMessage img {
+    max-height: min(80vh, 50vw);
+    filter: drop-shadow(5px 5px 0 black) drop-shadow(-5px -5px 0 black);
+    /* height: 100%; */
+}

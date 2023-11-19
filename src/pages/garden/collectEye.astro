@@ -1,0 +1,107 @@
+---
+import CollectAllThose from "./../../assets/Collect all those.png";
+
+import Layout from "../../layouts/Layout.astro";
+import { JarArea } from "./../../components/gardenComponents/jarGame/JarArea";
+
+import { Image } from "astro:assets";
+---
+
+<Layout title="Collect those eyes!!!">
+  <main>
+    <header>
+      <Image
+        draggable="false"
+        class="collect"
+        src={CollectAllThose}
+        alt="Collect all those"
+      />
+      <p class="eyes">
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <text x="0" y="100%">EYES</text>
+        </svg>
+      </p>
+    </header>
+
+    <JarArea client:only />
+  </main>
+</Layout>
+
+<style>
+  html,
+  body,
+  main {
+    margin: 0;
+  }
+  main {
+    height: 100vh;
+    background-color: #8e3bab;
+    position: relative;
+    overflow: hidden;
+    padding: 0 14px;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  main::before {
+    content: "";
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./../../assets/newspaper.jpg");
+    clip-path: polygon(
+      30% 61%,
+      51% 66%,
+      76% 55%,
+      100% 54%,
+      100% 100%,
+      0 100%,
+      0% 70%,
+      13% 61%
+    );
+  }
+
+  .eyes {
+    --eye-font-size: min(10rem, 15vw);
+
+    margin: 0;
+    position: relative;
+    z-index: 200;
+    font-family: "Trade Winds", sans-serif;
+    font-weight: bold;
+
+    width: calc(var(--eye-font-size) * 2.7);
+    height: calc(var(--eye-font-size) * 0.8);
+  }
+
+  .eyes svg {
+    overflow: visible;
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
+  .eyes text {
+    display: block;
+    fill: #1abc00;
+    stroke: #480061;
+    font-size: var(--eye-font-size);
+    stroke-width: calc(var(--eye-font-size) * 0.06);
+    font-weight: bold;
+    letter-spacing: -10px;
+  }
+
+  .collect {
+    width: min(1300px, 90vw);
+    height: auto;
+  }
+</style>

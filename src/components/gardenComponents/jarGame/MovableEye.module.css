@@ -1,0 +1,17 @@
+.MovableEye {
+    position: absolute;
+    z-index: 500;
+    width: max(13vw, 20vh);
+    user-select: none;
+    opacity: 0.9;
+}
+
+.MovableEye.isDone {
+    filter: drop-shadow(16px 16px 20px blue) invert(75%);
+    opacity: 0.8;
+}
+
+.MovableEye.isMoving {
+    filter: drop-shadow(5px 5px 0 black) drop-shadow(-5px -5px 0 black);
+    z-index : 600;
+}
