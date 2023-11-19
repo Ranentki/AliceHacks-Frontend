@@ -1,0 +1,70 @@
+@font-face {
+    font-family: Inkfree;
+    src: url("./../../../assets/Inkfree.ttf");
+  }
+
+.Form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    width: 100%;
+}
+
+.Form textarea {
+    background-image: url("./assets/paper.png");
+    font-size: 1.5rem;
+    padding: 3rem;
+    resize: none;
+    background-size: cover;
+
+    font-family: Inkfree, sans-serif;
+    border : none;
+
+
+    height: 40vh;
+    width: 70%;
+}
+
+.Form button {
+    aspect-ratio: 11.2;
+    width : 60%;
+
+    background-color: transparent;
+    border : none;
+
+    cursor: pointer;
+}
+
+.Form button:hover img {
+    filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);
+}
+
+.Form .Sticker:nth-child(1) {
+    position: absolute;
+    top : -20%;
+    left : 12%;
+
+    width : max(3vh, 3vw);
+    height : min(35vh, 35vw);
+    background-color: #A7E974;
+    z-index : 50;
+
+    transform: rotate(50deg);
+}
+
+
+.Form .Sticker:nth-child(2) {
+    position: absolute;
+    bottom : 5%;
+    right : 13%;
+
+    width : max(3vh, 3vw);
+    height : min(35vh, 35vw);
+    background-color: #B74ADD;
+    z-index : 50;
+
+    transform: rotate(50deg);
+}
