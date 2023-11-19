@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import classNames from "classnames";
-import eye1 from "../../../assets/eye1.png";
-import eye2 from "../../../assets/eye2.png";
-import eye3 from "../../../assets/eye3.png";
-import eye4 from "../../../assets/eye4.png";
+import eye1 from "./assets/eye1.png";
+import eye2 from "./assets/eye2.png";
+import eye3 from "./assets/eye3.png";
+import eye4 from "./assets/eye4.png";
 
 import styles from "./MovableEye.module.css";
 

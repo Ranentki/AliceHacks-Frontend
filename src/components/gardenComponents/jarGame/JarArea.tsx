@@ -1,11 +1,11 @@
 import styles from "./JarArea.module.css";
 
-import JarImg from "../../../assets/jar.png";
-import ThrowImg from "../../../assets/throw.png";
-import MeImg from "../../../assets/me.png";
+import JarImg from "./assets/jar.png";
+import ThrowImg from "./assets/throw.png";
+import MeImg from "./assets/me.png";
 
 import { MovableEye } from "./MovableEye";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 
 export function JarArea() {
   const jarRef = useRef<HTMLDivElement>(null);
@@ -29,6 +29,7 @@ export function JarArea() {
         event.clientY < rect.bottom - 10;
 
       setVictoryCondition((prev) => {
+        localStorage.setItem("victoryCondition", JSON.stringify(prev));
         const newArr = [...prev];
         newArr[val] = result;
         return newArr;
